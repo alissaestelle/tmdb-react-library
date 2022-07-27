@@ -55,7 +55,7 @@ button {
   grid-area: aside;
   max-width: 25%;
   height: 100%;
-  margin-left: 10px;
+  margin-left: 15px;
 
   overflow-y: scroll;
   position: fixed;
