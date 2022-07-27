@@ -1,38 +1,97 @@
+@font-face {
+  font-family: 'Bungee Outline';
+  src: url('./BungeeOutline-Regular.ttf');
+}
+
 .App {
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-wrap {
+  display: grid;
+  grid-template-columns: 0.35fr 1fr;
+  grid-template-rows: 0.30fr 1fr;
+  grid-template-areas: 
+  ". header"
+  "aside article";
+}
+
+.header {
+  grid-area: header;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1,
+h2 {
+  font-family: 'Bungee Outline', cursive;
+  font-size: 50px;
+  letter-spacing: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  margin-bottom: 15px;
+  font-size: 40px;
+  letter-spacing: 3px;
+  word-spacing: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-section {
+  width: 50%;
+  margin: auto;
+}
+
+input {
+  padding: 10px;
+}
+
+button {
+  text-transform: uppercase;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.titles-wrap {
+  grid-area: aside;
+  max-width: 25%;
+  height: 100%;
+  margin-left: 10px;
+
+  overflow-y: scroll;
+  position: fixed;
+}
+
+ul {
+  width: 85%;
+  padding-left: 10px;
+  word-wrap: break-word;
+}
+
+li {
+  list-style-type: none;
+}
+
+.poster-section {
+  grid-area: article;
+
+  height: 100vh;
+  padding-right: 20px;
+}
+
+#poster-title {
+  margin-left: 5px;
+  margin-bottom: 15px;
+}
+
+#poster {
+  width: 200px;
+  height: 300px;
+}
+
+.poster-images {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  flex-flow: wrap;
+  align-content: center;
+  justify-content: start;
+  gap: 10px;
 }
