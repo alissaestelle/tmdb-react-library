@@ -53,21 +53,24 @@ const Main = ({ movies, setMovies, search, setSearch }) => {
           </ul>
         ))}
       </div>
-      <div className="poster-section">
-        <h2 id="poster-title">Posters</h2>
-        <div className="poster-images">
-          {movies.map(
-            (movie) =>
-              movie.poster_path !== null && (
-                <div key={movie.id} className="img-card">
-                  <img
-                    id="poster"
-                    src={`${imageBasePath}${movie.poster_path}`}
-                    alt="Poster"
-                  />
-                </div>
-              )
-          )}
+      <div className="poster-wrapper">
+        <div className="poster-section">
+          <h2 id="poster-title">Posters</h2>
+          <div className="poster-images">
+            {movies.map(
+              (movie) =>
+                movie.poster_path !== null && (
+                  <div key={movie.id} className="img-card">
+                    <img
+                      id="poster"
+                      src={`${imageBasePath}${movie.poster_path}`}
+                      alt="Poster"
+                    />
+                    <p className="titles">{movie.title}</p>
+                  </div>
+                )
+            )}
+          </div>
         </div>
       </div>
     </div>
