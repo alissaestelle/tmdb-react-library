@@ -85,6 +85,7 @@
 
 .poster-section {
   width: 95%;
+  margin-top: 75px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -154,7 +155,7 @@
 
   .header {
     grid-area: header;
-    width: 100%;
+    margin: auto;
   }
 
   .titles-bar {
@@ -167,7 +168,9 @@
   }
 
   .poster-section {
+    width: 95%;
     margin-left: 65px;
+    margin-top: 75px;
   }
 
   /* #posters {
@@ -190,7 +193,7 @@
   .page-grid {
     display: grid;
     grid-template-columns: 0.35fr 1fr;
-    grid-template-rows: 0.30fr 1fr;
+    grid-template-rows: 170px 1fr;
     grid-template-areas: 
     ". header"
     "aside article";
@@ -198,7 +201,8 @@
   
   .header {
   grid-area: header;
-  width: 100%;
+  width: 85%;
+  margin: auto;
   }
   
   .titles-bar {
@@ -210,13 +214,11 @@
   }
 
   .poster-section {
-    width: 82.25%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 85%;
+    margin-top: 75px;
   }
 
   #posters {
-    width: 82.25%;
   }
 
   .image-flex {
@@ -230,11 +232,11 @@
 }
 
 
-@media only screen and (min-width: 769px) and (max-width: 990px) {
+@media only screen and (min-width: 768px) and (max-width: 990px) {
 
   .page-grid {
     display: grid;
-    grid-template-columns: 0.25fr 1fr;
+    grid-template-columns: 0.3fr 1fr;
     grid-template-rows: 170px 1fr;
     grid-template-areas: 
     ". header"
@@ -243,13 +245,17 @@
     
   .header {
     grid-area: header;
-    margin-left: 20px;
+    margin: auto;
   }
   
   .titles-bar {
   grid-area: aside;
-  max-width: 20%;
+  max-width: 25%;
   }
+
+  .titles-bar ul {
+    max-width: 75%;
+    }
   
   .poster-section-wrap {
   grid-area: article;
@@ -257,7 +263,7 @@
 
   .poster-section {
     margin-top: 75px;
-    width: 100%;
+    width: 95%;
   }
 
   #posters {
@@ -274,17 +280,17 @@
   }
 
   #poster-image {
-    width: 190px;
-    height: 280px;
+    width: 175px;
+    height: 260px;
   }
 
 }
 
-@media only screen and (min-width: 541px) and (max-width: 768px) {
+@media only screen and (min-width: 541px) and (max-width: 767px) {
 
   .page-grid {
     display: grid;
-    grid-template-columns: 0.40fr 1fr;
+    grid-template-columns: 0.35fr 1fr;
     grid-template-rows: 170px 1fr;
     grid-template-areas: 
     ". header"
@@ -293,7 +299,8 @@
   
   .header {
   grid-area: header;
-  width: 100%;
+  width: 90%;
+  margin: auto;
   }
 
   #tmdb-library {
@@ -355,7 +362,7 @@
   .page-grid {
     display: grid;
     grid-template-columns: 0.5fr 1fr;
-    grid-template-rows: 0.2fr 1fr;
+    grid-template-rows: 150px 1fr;
     grid-template-areas: 
     ". header"
     "aside article";
@@ -389,10 +396,9 @@
   grid-area: article;
   }
 
-  /* .poster-section {
-    margin-left: auto;
-    margin-right: auto;
-  } */
+  .poster-section {
+    margin: auto;
+  }
 
   #posters {
     width: 100%;
@@ -434,6 +440,7 @@
 
   .poster-section {
     width: 100%;
+    margin-top: auto;
   }
 
   #posters {
@@ -506,6 +513,7 @@
 
   .poster-section {
     width: 100%;
+    margin-top: auto;
   }
 
   #posters {
