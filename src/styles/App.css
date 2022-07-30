@@ -10,7 +10,7 @@
 
 .page-grid {
   display: grid;
-  grid-template-columns: 0.35fr 1fr;
+  grid-template-columns: 0.30fr 1fr;
   grid-template-rows: 0.35fr 1fr;
   grid-template-areas: 
   ". header"
@@ -21,7 +21,10 @@
 
 .header {
   grid-area: header;
+
+  width: 95%;
   text-align: center;
+  /* margin: 0 auto; */
 }
 
 #tmdb-library,
@@ -42,7 +45,6 @@
 }
 
 .search-section {
-  width: 50%;
   margin: auto;
 }
 
@@ -82,7 +84,7 @@
 }
 
 .poster-section {
-  width: 75%;
+  width: 95%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -108,11 +110,11 @@
   display: none;
 }
 
-@media only screen and (min-width: 1281px) {
+/* @media only screen and (min-width: 1281px) {
 
   .page-grid {
     display: grid;
-    grid-template-columns: 0.25fr 1fr;
+    grid-template-columns: 0.35fr 1fr;
     grid-template-rows: 0.25fr 1fr;
     grid-template-areas: 
     ". header"
@@ -137,13 +139,13 @@
     margin-right: auto;
   }
   
-}
+} */
 
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
 
   .page-grid {
     display: grid;
-    grid-template-columns: 0.30fr 1fr;
+    grid-template-columns: 0.35fr 1fr;
     grid-template-rows: 0.25fr 1fr;
     grid-template-areas: 
     ". header"
@@ -152,10 +154,12 @@
 
   .header {
     grid-area: header;
+    width: 100%;
   }
 
   .titles-bar {
     grid-area: aside;
+    max-width: 25%;
   }
 
   .poster-section-wrap {
@@ -163,14 +167,12 @@
   }
 
   .poster-section {
-    width: 87.75%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 65px;
   }
 
-  #posters {
+  /* #posters {
     width: 90%;
-  }
+  } */
 
   .image-flex {
     display: flex;
@@ -187,7 +189,7 @@
 
   .page-grid {
     display: grid;
-    grid-template-columns: 0.30fr 1fr;
+    grid-template-columns: 0.35fr 1fr;
     grid-template-rows: 0.30fr 1fr;
     grid-template-areas: 
     ". header"
@@ -196,6 +198,7 @@
   
   .header {
   grid-area: header;
+  width: 100%;
   }
   
   .titles-bar {
@@ -231,8 +234,8 @@
 
   .page-grid {
     display: grid;
-    grid-template-columns: 205px 750px;
-    grid-template-rows: 200px 1fr;
+    grid-template-columns: 0.25fr 1fr;
+    grid-template-rows: 170px 1fr;
     grid-template-areas: 
     ". header"
     "aside article";
@@ -240,10 +243,12 @@
     
   .header {
     grid-area: header;
+    margin-left: 20px;
   }
   
   .titles-bar {
   grid-area: aside;
+  max-width: 20%;
   }
   
   .poster-section-wrap {
@@ -251,9 +256,8 @@
   }
 
   .poster-section {
-    width: 81.25%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 75px;
+    width: 100%;
   }
 
   #posters {
@@ -265,7 +269,7 @@
     display: flex;
     flex-flow: wrap;
     align-content: center;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 10px;
   }
 
@@ -280,7 +284,7 @@
 
   .page-grid {
     display: grid;
-    grid-template-columns: 170px 1fr;
+    grid-template-columns: 0.40fr 1fr;
     grid-template-rows: 170px 1fr;
     grid-template-areas: 
     ". header"
@@ -289,6 +293,7 @@
   
   .header {
   grid-area: header;
+  width: 100%;
   }
 
   #tmdb-library {
@@ -319,7 +324,8 @@
   }
 
   .poster-section {
-    width: 80%;
+    width: 85%;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -333,7 +339,7 @@
     flex-flow: wrap;
     align-content: center;
     justify-content: flex-start;
-    gap: 10px;
+    gap: 5px;
   }
 
   #poster-image {
@@ -348,8 +354,8 @@
 
   .page-grid {
     display: grid;
-    grid-template-columns: 170px 1fr;
-    grid-template-rows: 170px 1fr;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 0.2fr 1fr;
     grid-template-areas: 
     ". header"
     "aside article";
@@ -357,7 +363,7 @@
   
   .header {
   grid-area: header;
-  width: 90%;
+  margin-left: 10px;
   }
 
   #tmdb-library, #titles {
@@ -370,8 +376,8 @@
   
   .titles-bar {
   grid-area: aside;
-  max-width: 25%;
-  margin-top: -7.5px;
+  max-width: 27.5%;
+  margin-top: -5px;
   margin-left: 15px;
   padding-right: 15px;
 
@@ -383,14 +389,13 @@
   grid-area: article;
   }
 
-  .poster-section {
-    width: 90%;
+  /* .poster-section {
     margin-left: auto;
     margin-right: auto;
-  }
+  } */
 
   #posters {
-    width: 90%;
+    width: 100%;
     font-size: 30px;
     text-align: center;
   }
@@ -399,7 +404,7 @@
     display: flex;
     flex-flow: wrap;
     align-content: center;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 10px;
   }
 
@@ -474,6 +479,10 @@
     flex-direction: column;
     align-items: center;
     justify-items: center;
+  }
+
+  .header {
+    width: 100%;
   }
 
   #tmdb-library {
