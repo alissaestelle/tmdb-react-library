@@ -29,9 +29,9 @@ const Main = ({ movies, setMovies, search, setSearch }) => {
   }
 
   return (
-    <div className="page-wrap">
+    <div className="page-grid">
       <div className="header">
-        <h1>TMDB LIBRARY</h1>
+        <h1 id="tmdb-library">TMDB LIBRARY</h1>
         <div className="search-section">
           <form onSubmit={renderSearch}>
             <input
@@ -45,28 +45,30 @@ const Main = ({ movies, setMovies, search, setSearch }) => {
           </form>
         </div>
       </div>
-      <div className="titles-wrap">
-        <h2>Titles</h2>
+      <div className="titles-bar">
+        <h2 id="titles">Titles</h2>
         {movies.map((movie) => (
           <ul key={movie.id}>
             <li>{movie.title}</li>
           </ul>
         ))}
       </div>
-      <div className="poster-wrapper">
+      <div className="poster-section-wrap">
         <div className="poster-section">
-          <h2 id="poster-title">Posters</h2>
-          <div className="poster-images">
+          <h2 id="posters">Posters</h2>
+          <div className="image-flex">
             {movies.map(
               (movie) =>
                 movie.poster_path !== null && (
-                  <div key={movie.id} className="img-card">
+                  <div key={movie.id} className="image-card">
                     <img
-                      id="poster"
+                      id="poster-image"
                       src={`${imageBasePath}${movie.poster_path}`}
                       alt="Poster"
                     />
-                    <p className="titles">{movie.title}</p>
+                    <div className="titles-wrap">
+                      <p className="titles">{movie.title}</p>
+                    </div>
                   </div>
                 )
             )}

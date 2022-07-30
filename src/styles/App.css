@@ -8,13 +8,15 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.page-wrap {
+.page-grid {
   display: grid;
   grid-template-columns: 0.35fr 1fr;
-  grid-template-rows: 0.30fr 1fr;
+  grid-template-rows: 0.35fr 1fr;
   grid-template-areas: 
   ". header"
   "aside article";
+
+  width: 100vw;
 }
 
 .header {
@@ -22,14 +24,17 @@
   text-align: center;
 }
 
-h1,
-h2 {
+#tmdb-library,
+#titles, #posters {
   font-family: 'Bungee Outline', cursive;
-  font-size: 50px;
   letter-spacing: 5px;
 }
 
-h2 {
+#tmdb-library {
+  font-size: 50px;
+}
+
+#titles, #posters {
   margin-bottom: 15px;
   font-size: 40px;
   letter-spacing: 3px;
@@ -41,17 +46,17 @@ h2 {
   margin: auto;
 }
 
-input {
+#search-input {
   padding: 10px;
 }
 
-button {
+#search {
   text-transform: uppercase;
   border: 1px solid black;
   padding: 10px;
 }
 
-.titles-wrap {
+.titles-bar {
   grid-area: aside;
   max-width: 25%;
   height: 100%;
@@ -61,42 +66,41 @@ button {
   position: fixed;
 }
 
-ul {
+.titles-bar ul {
   width: 85%;
   padding-left: 10px;
   word-wrap: break-word;
 }
 
-li {
+.titles-bar li {
   list-style-type: none;
 }
 
-.poster-wrapper {
+.poster-section-wrap {
   grid-area: article;
-
   height: 100vh;
 }
 
 .poster-section {
-  width: 90%;
+  width: 75%;
   margin-left: auto;
   margin-right: auto;
 }
 
-#poster-title {
-  margin-left: 5px;
+#posters {
+  width: 75%;
 }
 
-#poster {
+#poster-image {
   width: 200px;
   height: 300px;
 }
 
-.poster-images {
+.image-flex {
   display: flex;
   flex-flow: wrap;
   align-content: center;
-  justify-content: start;
+  justify-content: flex-start;
   gap: 10px;
 }
 
@@ -104,11 +108,428 @@ li {
   display: none;
 }
 
+@media only screen and (min-width: 1281px) {
+
+  .page-grid {
+    display: grid;
+    grid-template-columns: 0.25fr 1fr;
+    grid-template-rows: 0.25fr 1fr;
+    grid-template-areas: 
+    ". header"
+    "aside article";
+  }
+  
+  .header {
+  grid-area: header;
+  text-align: center;
+  }
+  
+  .titles-bar {
+  grid-area: aside;
+  }
+  
+  .poster-section-wrap {
+  grid-area: article;
+  }
+  
+  .poster-section {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+
+  .page-grid {
+    display: grid;
+    grid-template-columns: 0.30fr 1fr;
+    grid-template-rows: 0.25fr 1fr;
+    grid-template-areas: 
+    ". header"
+    "aside article";
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  .titles-bar {
+    grid-area: aside;
+  }
+
+  .poster-section-wrap {
+    grid-area: article;
+  }
+
+  .poster-section {
+    width: 87.75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #posters {
+    width: 90%;
+  }
+
+  .image-flex {
+    display: flex;
+    flex-flow: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+}
+
 
 @media only screen and (min-width: 991px) and (max-width: 1024px) {
 
+  .page-grid {
+    display: grid;
+    grid-template-columns: 0.30fr 1fr;
+    grid-template-rows: 0.30fr 1fr;
+    grid-template-areas: 
+    ". header"
+    "aside article";
+  }
+  
+  .header {
+  grid-area: header;
+  }
+  
+  .titles-bar {
+  grid-area: aside;
+  }
+  
+  .poster-section-wrap {
+  grid-area: article;
+  }
+
+  .poster-section {
+    width: 82.25%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #posters {
+    width: 82.25%;
+  }
+
+  .image-flex {
+    display: flex;
+    flex-flow: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
 }
-@media only screen and (min-width: 769px) and (max-width: 990px) {}
-@media only screen and (min-width: 481px) and (max-width: 768px) {}
-@media only screen and (min-width: 281px) and (max-width: 480px) {}
-@media only screen and (max-width: 280px) {}
+
+
+@media only screen and (min-width: 769px) and (max-width: 990px) {
+
+  .page-grid {
+    display: grid;
+    grid-template-columns: 205px 750px;
+    grid-template-rows: 200px 1fr;
+    grid-template-areas: 
+    ". header"
+    "aside article";
+  }
+    
+  .header {
+    grid-area: header;
+  }
+  
+  .titles-bar {
+  grid-area: aside;
+  }
+  
+  .poster-section-wrap {
+  grid-area: article;
+  }
+
+  .poster-section {
+    width: 81.25%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #posters {
+    width: 100%;
+    text-align: center;
+  }
+
+  .image-flex {
+    display: flex;
+    flex-flow: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  #poster-image {
+    width: 190px;
+    height: 280px;
+  }
+
+}
+
+@media only screen and (min-width: 541px) and (max-width: 768px) {
+
+  .page-grid {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    grid-template-rows: 170px 1fr;
+    grid-template-areas: 
+    ". header"
+    "aside article";
+  }
+  
+  .header {
+  grid-area: header;
+  }
+
+  #tmdb-library {
+    font-size: 40px;
+  }
+
+  #titles {
+    font-size: 30px;
+  }
+
+  #search {
+    margin-top: 5px;
+  }
+  
+  .titles-bar {
+  grid-area: aside;
+  max-width: 25%;
+  margin-top: -7.5px;
+  margin-left: 15px;
+  padding-right: 15px;
+
+  overflow-y: scroll;
+  position: fixed;
+  }
+  
+  .poster-section-wrap {
+  grid-area: article;
+  }
+
+  .poster-section {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #posters {
+    font-size: 30px;
+  }
+
+  .image-flex {
+    display: flex;
+    flex-flow: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  #poster-image {
+    width: 145px;
+    height: 215px;
+  }
+
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 540px) {
+
+  .page-grid {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    grid-template-rows: 170px 1fr;
+    grid-template-areas: 
+    ". header"
+    "aside article";
+  }
+  
+  .header {
+  grid-area: header;
+  width: 90%;
+  }
+
+  #tmdb-library, #titles {
+    font-size: 30px;
+  }
+
+  #search {
+    margin-top: 5px;
+  }
+  
+  .titles-bar {
+  grid-area: aside;
+  max-width: 25%;
+  margin-top: -7.5px;
+  margin-left: 15px;
+  padding-right: 15px;
+
+  overflow-y: scroll;
+  position: fixed;
+  }
+  
+  .poster-section-wrap {
+  grid-area: article;
+  }
+
+  .poster-section {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #posters {
+    width: 90%;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .image-flex {
+    display: flex;
+    flex-flow: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  #poster-image {
+    width: 145px;
+    height: 215px;
+  }
+
+}
+
+@media only screen and (min-width: 281px) and (max-width: 480px) {
+
+  .page-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .search-section {
+    margin-bottom: 10px;
+  }
+
+  .titles-bar {
+    display: none;
+  }
+
+  .poster-section {
+    width: 100%;
+  }
+
+  #posters {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .image-flex {
+    display: flex;
+    flex-flow: wrap;
+    align-content: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .image-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #poster-image {
+    width: 150px;
+    height: 220px;
+  }
+
+  .titles-wrap {
+    width: 150px;
+    word-wrap: break-word;
+  }
+
+  .titles {
+    display: contents;
+  }
+
+}
+
+
+@media only screen and (max-width: 280px) {
+
+  .page-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+
+  #tmdb-library {
+    font-size: 35px;
+  }
+
+  .search-section {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #search {
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+
+  .titles-bar {
+    display: none;
+  }
+
+  .poster-section {
+    width: 100%;
+  }
+
+  #posters {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .image-flex {
+    display: flex;
+    flex-flow: wrap;
+    align-content: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .image-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #poster-image {
+    width: 165px;
+    height: 240px;
+  }
+
+  .titles-wrap {
+    width: 150px;
+    word-wrap: break-word;
+    text-align: center;
+  }
+
+  .titles {
+    display: contents;
+  }
+}
