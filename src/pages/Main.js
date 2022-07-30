@@ -11,6 +11,7 @@ const Main = ({ movies, setMovies, search, setSearch }) => {
 
       let dailyArr = dailyMovies.data.results
       setMovies(dailyArr)
+      console.log(dailyArr)
     }
     getDailyMovies()
   }, [])
@@ -59,6 +60,7 @@ const Main = ({ movies, setMovies, search, setSearch }) => {
           <div className="image-flex">
             {movies.map(
               (movie) =>
+                movie.title !== 'The Black Phone' &&
                 movie.poster_path !== null && (
                   <div key={movie.id} className="image-card">
                     <img
